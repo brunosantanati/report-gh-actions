@@ -52,9 +52,7 @@ function uploadArtifact() {
         continueOnError: false
     }
     
-    const uploadResponse = await artifactClient.uploadArtifact(artifactName, files, rootDirectory, options)
-
-    console.log(uploadResponse)
+    artifactClient.uploadArtifact(artifactName, files, rootDirectory, options)
 }
 
 run()
