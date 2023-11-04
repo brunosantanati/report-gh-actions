@@ -36,6 +36,7 @@ function generateCsvReport(products) {
         .on('finish', () => {
             console.log('CSV Report is ready!')
             const csvContent = exec.exec(`cat ${path}`)
+            console.log(`Report content: ${csvContent}`)
             core.setOutput('csvContent', csvContent)
         })
 }
