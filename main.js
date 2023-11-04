@@ -3,8 +3,9 @@ const github = require('@actions/github')
 const exec = require('@actions/exec')
 
 function run() {
-    console.log('console.log test')
-    core.notice('core.notice test')
+    const apiUrl = core.getInput('apiUrl', { required: true })
+
+    console.log(`apiUrl = ${apiUrl}`)
 }
 
 run()

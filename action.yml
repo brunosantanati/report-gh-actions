@@ -1,5 +1,9 @@
 name: 'Report CSV'
 description: 'Generate report CSV containing products'
+inputs:
+  apiUrl:
+    description: 'API URL containing the products'
+    required: true
 runs:
   using: 'node16'
   main: 'main.js'
