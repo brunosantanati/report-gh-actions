@@ -7,7 +7,7 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-/node_modules
+#/node_modules #we must upload node_modules folder to make the action work well
 /dist
 dist-ssr
 *.local
