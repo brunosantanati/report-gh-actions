@@ -35,7 +35,7 @@ function generateCsvReport(products) {
         .on('error', err => console.error(err))
         .on('finish', () => {
             console.log('CSV Report is ready!')
-            const csvContent = exec.exec(`cat ${path} | base64`)
+            const csvContent = exec.exec(`cat ${path}`)
             core.setOutput('csvContent', csvContent)
         })
 }
