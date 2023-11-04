@@ -1,0 +1,5 @@
+name: 'Report CSV'
+description: 'Generate report CSV containing products'
+runs:
+  using: 'node20'
+  main: 'main.js'
