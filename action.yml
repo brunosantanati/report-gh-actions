@@ -4,6 +4,9 @@ inputs:
   apiUrl:
     description: 'API URL containing the products'
     required: true
+outputs:
+  csvContent:
+    description: 'CSV Report content encoded using base 64'
 runs:
   using: 'node16'
   main: 'main.js'
