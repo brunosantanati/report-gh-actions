@@ -3,7 +3,6 @@ const core = require('@actions/core')
 const exec = require('@actions/exec')
 const https = require('https')
 const { writeToPath } = require('@fast-csv/format')
-const { exec } = require('child_process')
 
 function run() {
     const apiUrl = core.getInput('apiUrl', { required: true })
