@@ -33,10 +33,11 @@ function generateCsvReport(products) {
 
     writeToPath(path, data, options)
         .on('error', err => console.error(err))
-        .on('finish', () => console.log('CSV Report is ready!'))
-
-    const csvContent = exec.exec(`cat ${path} | base64`)
-    core.setOutput('csvContent', csvContent)
+        .on('finish', () => {
+            console.log('CSV Report is ready!')
+            const csvContent = exec.exec(`cat ${path} | base64`)
+            core.setOutput('csvContent', csvContent)
+        })
 }
 
 run()
